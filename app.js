@@ -4,7 +4,7 @@ import morgan from "morgan";
 import itemsRouter from "./routes/items.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(morgan("dev"));
