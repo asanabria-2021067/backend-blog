@@ -10,6 +10,17 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    nombre: "Dragon Ball Blog API",
+    version: "1.0.0",
+    endpoints: {
+      items: "/items",
+      item: "/items/:id",
+    },
+  });
+});
+
 app.use("/items", itemsRouter);
 
 app.listen(PORT, () => {
