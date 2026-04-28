@@ -1,6 +1,6 @@
-# Backend Blog
+# Dragon Ball Blog API
 
-API REST para blog construida con Express 5, SQLite y Node.js.
+API REST de blog tematico de Dragon Ball construida con Express 5, SQLite y Node.js.
 
 ## Tech Stack
 
@@ -19,19 +19,19 @@ npm install
 ## Scripts
 
 ```bash
-npm run dev    # Desarrollo con hot reload (nodemon)
+npm run dev    # Desarrollo con hot reload (nodemon) - puerto 3001
 npm start      # Produccion
 ```
 
 ## Endpoints
 
-### Items
+Base URL: `http://localhost:3001`
 
-| Metodo | Ruta        | Descripcion          |
-|--------|-------------|----------------------|
-| GET    | /items      | Obtener todos        |
-| GET    | /items/:id  | Obtener por ID       |
-| POST   | /items      | Crear nuevo item     |
+| Metodo | Ruta        | Descripcion              |
+|--------|-------------|--------------------------|
+| GET    | /items      | Obtener todos (desc ID)  |
+| GET    | /items/:id  | Obtener por ID           |
+| POST   | /items      | Crear nuevo articulo     |
 
 ### POST /items - Body
 
@@ -39,11 +39,20 @@ npm start      # Produccion
 {
   "title": "string (requerido)",
   "description": "string",
+  "body": "string (contenido completo)",
   "image": "string (URL)",
-  "category": "string",
+  "category": "string (Batallas | Personajes | Transformaciones)",
   "rating": "number (0-5)"
 }
 ```
+
+## Datos Seed
+
+12 articulos precargados:
+
+- **Batallas**: Goku vs Freezer, Gohan vs Cell, Goku vs Vegeta, Goku vs Jiren
+- **Personajes**: Goku, Vegeta, Piccolo, Gohan
+- **Transformaciones**: Super Saiyan, Ultra Instinto, Super Saiyan Blue, Fusion
 
 ## Estructura
 
