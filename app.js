@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
+    status: "ok",
     nombre: "Dragon Ball Blog API",
     version: "1.0.0",
     endpoints: {
